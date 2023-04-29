@@ -21,6 +21,5 @@ namespace Entities.Concrete
         public int IcKapiNo { get; set; }
         public int Ada { get; set; }
         public int Parsel { get; set; }
-        public ICollection<Firma>? Firmas { get; set; }
     }
 }

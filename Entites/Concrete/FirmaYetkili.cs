@@ -14,6 +14,5 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string Adi { get; set; }
         public string TelefonNo { get; set; }
-        public ICollection<Firma>? Firmas { get; set; }
     }
 }

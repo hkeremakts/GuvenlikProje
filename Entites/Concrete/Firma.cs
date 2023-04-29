@@ -14,10 +14,6 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string FirmaAdi { get; set; }
         public string FirmaTelefonu { get; set; }
-        public int FirmaYetkiliId { get; set; }
-        public FirmaYetkili? FirmaYetkili { get; set; }
-        public int AdresId { get; set; }
-        public Adres? Adres { get; set; }
         public string TepeMusteriNo { get; set; }
         public int SatisKaynagiId { get; set; }
         public SatisKaynagi? SatisKaynagi { get; set; }

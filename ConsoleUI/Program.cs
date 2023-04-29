@@ -10,8 +10,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int adresId = 1;
-        int firmaYetkiliId = 1;
         Random rnd = new Random();
         Assembly entityAssembly = Assembly.GetAssembly(typeof(Adres));
         Assembly dalAssembly = Assembly.GetAssembly(typeof(EfAdresDal));
@@ -50,17 +48,7 @@ internal class Program
                 {
                     if (property.Name.Contains("Id"))
                     {
-                        if (property.Name == "AdresId")
-                        {
-                            property.SetValue(obj, adresId);
-                            adresId += 1;
-                        }
-                        else if (property.Name == "FirmaYetkiliId")
-                        {
-                            property.SetValue(obj, firmaYetkiliId);
-                            firmaYetkiliId += 1;
-                        }
-                        else if (property.Name != "Id")
+                        if (property.Name != "Id")
                         {
                             property.SetValue(obj, rnd.Next(1, 15));
                         }

@@ -44,7 +44,7 @@ namespace Business.Concrete
 
         public IDataResult<Firma> GetByAdresId(int adresId)
         {
-            var result = _firmaDal.Get(f => f.AdresId == adresId);
+            var result = _firmaDal.Get(f => f.Id == adresId);
             return new SuccessDataResult<Firma>(result);
         }
 

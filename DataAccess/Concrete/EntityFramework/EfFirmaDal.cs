@@ -21,7 +21,7 @@ namespace DataAccess.Concrete.EntityFramework
                 var result =
                     from firma in context.Firmas
                     join adres in context.Adress
-                    on firma.AdresId equals adres.Id
+                    on firma.Id equals adres.Id
                     join cadde in context.Caddes
                     on adres.CaddeId equals cadde.Id
                     join sokak in context.Sokaks
@@ -31,7 +31,7 @@ namespace DataAccess.Concrete.EntityFramework
                     join farkliFirma in context.FarkliFirmas
                     on firma.FarkliFirmaId equals farkliFirma.Id
                     join firmaYetkili in context.FirmaYetkilis
-                    on firma.FirmaYetkiliId equals firmaYetkili.Id
+                    on firma.Id equals firmaYetkili.Id
                     join paketTeslimIadeDurumu in context.PaketTeslimIadeDurumus
                     on firma.PaketTeslimIadeDurumuId equals paketTeslimIadeDurumu.Id
                     join satisKaynagi in context.SatisKaynagis
@@ -86,7 +86,7 @@ namespace DataAccess.Concrete.EntityFramework
                 var result =
                      from firma in context.Firmas
                      join adres in context.Adress
-                     on firma.AdresId equals adres.Id
+                     on firma.Id equals adres.Id
                      join cadde in context.Caddes
                      on adres.CaddeId equals cadde.Id
                      join sokak in context.Sokaks
@@ -96,7 +96,7 @@ namespace DataAccess.Concrete.EntityFramework
                      join farkliFirma in context.FarkliFirmas
                      on firma.FarkliFirmaId equals farkliFirma.Id
                      join firmaYetkili in context.FirmaYetkilis
-                     on firma.FirmaYetkiliId equals firmaYetkili.Id
+                     on firma.Id equals firmaYetkili.Id
                      join paketTeslimIadeDurumu in context.PaketTeslimIadeDurumus
                      on firma.PaketTeslimIadeDurumuId equals paketTeslimIadeDurumu.Id
                      join satisKaynagi in context.SatisKaynagis
@@ -148,7 +148,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from adres in context.Adress
                              join firma in context.Firmas
-                             on adres.Id equals firma.AdresId
+                             on adres.Id equals firma.Id
                              where firma.FirmaAdi.Contains(firmaAdi)
                              select new FirmaSearchDTO()
                              {
