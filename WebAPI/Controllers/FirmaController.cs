@@ -101,15 +101,15 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getbyadresid")]
-        public IActionResult GetByAdresId(int adresId)
-        {
-            var result = _firmaService.GetByAdresId(adresId);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
+        //[HttpGet("getbyadresid")]
+        //public IActionResult GetByAdresId(int adresId)
+        //{
+        //    var result = _firmaService.GetByAdresId(adresId);
+        //    if (result.Success)
+        //    {
+        //        return Ok(result);
+        //    }
+        //    return BadRequest(result);
+        //}
     }
 }

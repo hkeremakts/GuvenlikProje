@@ -13,7 +13,7 @@ namespace Business.Abstact
     {
         IDataResult<List<Firma>> GetAll();
         IDataResult<Firma> GetById(int id);
-        IDataResult<Firma> GetByAdresId(int adresId);
+        //IDataResult<Firma> GetByAdresId(int adresId);
         IDataResult<List<FirmaSearchDTO>> GetByFirmaAdiContains(string firmaAdi);
         IDataResult<List<FirmaComponentsDTO>> GetAllFirmaComponents();
         IDataResult<FirmaComponentsDTO> GetFirmaComponentsById(int id);

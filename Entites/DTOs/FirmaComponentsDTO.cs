@@ -28,18 +28,18 @@ namespace Entities.DTOs
         public string FarkliFirmaAdi { get; set; }
         public string Aciklama { get; set; }
         public string COGorusmeDetayi { get; set; }
-        public DateTime OstimGorusmeTarihi { get; set; }
+        public DateTime? OstimGorusmeTarihi { get; set; }
         public string OstimNot { get; set; }
         public string FirmaninAlarmIstemedigineDairYazi { get; set; }
-        public DateTime TepeGorusmeTarihi { get; set; }
+        public DateTime? TepeGorusmeTarihi { get; set; }
         public string TepeNot { get; set; }
         public string PaketTeslimIadeDurumuAdi { get; set; }
         public string MalzemeTeslimNo { get; set; }
         public bool MalzemeTeslimDurumu { get; set; }
-        public DateTime MalzemeTeslimTarihi { get; set; }
+        public DateTime? MalzemeTeslimTarihi { get; set; }
         public bool KurulumDurumu { get; set; }
-        public DateTime MontajTarihi { get; set; }
+        public DateTime? MontajTarihi { get; set; }
         public string SahaRevizeNot { get; set; }
-        public DateTime SahaRevizeTarihi { get; set; }
+        public DateTime? SahaRevizeTarihi { get; set; }
     }
 }

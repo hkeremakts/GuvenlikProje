@@ -11,19 +11,13 @@ internal class Program
     private static void Main(string[] args)
     {
         Random rnd = new Random();
-        Assembly entityAssembly = Assembly.GetAssembly(typeof(Adres));
-        Assembly dalAssembly = Assembly.GetAssembly(typeof(EfAdresDal));
-        Assembly managerAssembly = Assembly.GetAssembly(typeof(AdresManager));
+        Assembly entityAssembly = Assembly.GetAssembly(typeof(Firma));
+        Assembly dalAssembly = Assembly.GetAssembly(typeof(EfFirmaDal));
+        Assembly managerAssembly = Assembly.GetAssembly(typeof(FirmaManager));
 
         var entityTypes = entityAssembly.GetTypes().Where(e => e.GetInterface("IEntity") != null).ToList();
         var f = entityTypes.Where(e => e.Name == "Firma").SingleOrDefault();
-        var a = entityTypes.Where(e => e.Name == "Adres").SingleOrDefault();
-        var fy = entityTypes.Where(e => e.Name == "FirmaYetkili").SingleOrDefault();
         entityTypes.Remove(f);
-        entityTypes.Remove(a);
-        entityTypes.Remove(fy);
-        entityTypes.Add(fy);
-        entityTypes.Add(a);
         entityTypes.Add(f);
         var dalTypes = dalAssembly.GetTypes().Where(d => d.Name.Contains("Dal") == true
             && d.Name.Contains("User") == false);

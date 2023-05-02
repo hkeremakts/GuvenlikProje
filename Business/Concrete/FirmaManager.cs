@@ -42,11 +42,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<FirmaComponentsDTO>>(result);
         }
 
-        public IDataResult<Firma> GetByAdresId(int adresId)
-        {
-            var result = _firmaDal.Get(f => f.Id == adresId);
-            return new SuccessDataResult<Firma>(result);
-        }
+        //public IDataResult<Firma> GetByAdresId(int adresId)
+        //{
+        //    var result = _firmaDal.Get(f => f.Id == adresId);
+        //    return new SuccessDataResult<Firma>(result);
+        //}
 
         public IDataResult<List<FirmaSearchDTO>> GetByFirmaAdiContains(string firmaAdi)
         {

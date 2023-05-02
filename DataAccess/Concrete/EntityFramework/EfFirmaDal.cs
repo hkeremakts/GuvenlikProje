@@ -20,18 +20,14 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result =
                     from firma in context.Firmas
-                    join adres in context.Adress
-                    on firma.Id equals adres.Id
                     join cadde in context.Caddes
-                    on adres.CaddeId equals cadde.Id
+                    on firma.CaddeId equals cadde.Id
                     join sokak in context.Sokaks
-                    on adres.SokakId equals sokak.Id
+                    on firma.SokakId equals sokak.Id
                     join durum in context.Durums
                     on firma.DurumId equals durum.Id
                     join farkliFirma in context.FarkliFirmas
                     on firma.FarkliFirmaId equals farkliFirma.Id
-                    join firmaYetkili in context.FirmaYetkilis
-                    on firma.Id equals firmaYetkili.Id
                     join paketTeslimIadeDurumu in context.PaketTeslimIadeDurumus
                     on firma.PaketTeslimIadeDurumuId equals paketTeslimIadeDurumu.Id
                     join satisKaynagi in context.SatisKaynagis
@@ -42,19 +38,19 @@ namespace DataAccess.Concrete.EntityFramework
                     {
                         FirmaId=firma.Id,
                         Aciklama = firma.Aciklama,
-                        Ada = adres.Ada,
-                        AdresNo = adres.AdresNo,
+                        Ada = firma.Ada,
+                        AdresNo = firma.AdresNo,
                         COGorusmeDetayi = firma.COGorusmeDetayi,
                         CaddeAdi = cadde.CaddeAdi,
-                        DisKapiNo = adres.DisKapiNo,
+                        DisKapiNo = firma.DisKapiNo,
                         DurumAdi = durum.DurumAdi,
                         FarkliFirmaAdi = farkliFirma.FarkliFirmaAdi,
                         FirmaAdi = firma.FirmaAdi,
                         FirmaninAlarmIstemedigineDairYazi = firma.FirmaninAlarmIstemedigineDairYazi,
                         FirmaTelefonu = firma.FirmaTelefonu,
-                        FirmaYetkiliAdi = firmaYetkili.Adi,
-                        FirmaYetkiliTelefonNo = firmaYetkili.TelefonNo,
-                        IcKapiNo = adres.IcKapiNo,
+                        FirmaYetkiliAdi = firma.YetkiliAdi,
+                        FirmaYetkiliTelefonNo = firma.YetkiliTelefonNo,
+                        IcKapiNo = firma.IcKapiNo,
                         KurulumDurumu = firma.KurulumDurumu,
                         MalzemeTeslimDurumu = firma.MalzemeTeslimDurumu,
                         MalzemeTeslimNo = firma.MalzemeTeslimNo,
@@ -63,7 +59,7 @@ namespace DataAccess.Concrete.EntityFramework
                         OstimGorusmeTarihi = firma.OstimGorusmeTarihi,
                         OstimNot = firma.OstimNot,
                         PaketTeslimIadeDurumuAdi = paketTeslimIadeDurumu.PaketTeslimIadeDurumuAdi,
-                        Parsel = adres.Parsel,
+                        Parsel = firma.Parsel,
                         SahaRevizeNot = firma.SahaRevizeNot,
                         SahaRevizeTarihi = firma.SahaRevizeTarihi,
                         SatisKaynagiAdi = satisKaynagi.SatisKaynagiAdi,
@@ -85,18 +81,14 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result =
                      from firma in context.Firmas
-                     join adres in context.Adress
-                     on firma.Id equals adres.Id
                      join cadde in context.Caddes
-                     on adres.CaddeId equals cadde.Id
+                     on firma.CaddeId equals cadde.Id
                      join sokak in context.Sokaks
-                     on adres.SokakId equals sokak.Id
+                     on firma.SokakId equals sokak.Id
                      join durum in context.Durums
                      on firma.DurumId equals durum.Id
                      join farkliFirma in context.FarkliFirmas
                      on firma.FarkliFirmaId equals farkliFirma.Id
-                     join firmaYetkili in context.FirmaYetkilis
-                     on firma.Id equals firmaYetkili.Id
                      join paketTeslimIadeDurumu in context.PaketTeslimIadeDurumus
                      on firma.PaketTeslimIadeDurumuId equals paketTeslimIadeDurumu.Id
                      join satisKaynagi in context.SatisKaynagis
@@ -107,19 +99,19 @@ namespace DataAccess.Concrete.EntityFramework
                      {
                          FirmaId=firma.Id,
                          Aciklama = firma.Aciklama,
-                         Ada = adres.Ada,
-                         AdresNo = adres.AdresNo,
+                         Ada = firma.Ada,
+                         AdresNo = firma.AdresNo,
                          COGorusmeDetayi = firma.COGorusmeDetayi,
                          CaddeAdi = cadde.CaddeAdi,
-                         DisKapiNo = adres.DisKapiNo,
+                         DisKapiNo = firma.DisKapiNo,
                          DurumAdi = durum.DurumAdi,
                          FarkliFirmaAdi = farkliFirma.FarkliFirmaAdi,
                          FirmaAdi = firma.FirmaAdi,
                          FirmaninAlarmIstemedigineDairYazi = firma.FirmaninAlarmIstemedigineDairYazi,
                          FirmaTelefonu = firma.FirmaTelefonu,
-                         FirmaYetkiliAdi = firmaYetkili.Adi,
-                         FirmaYetkiliTelefonNo = firmaYetkili.TelefonNo,
-                         IcKapiNo = adres.IcKapiNo,
+                         FirmaYetkiliAdi = firma.YetkiliAdi,
+                         FirmaYetkiliTelefonNo = firma.YetkiliTelefonNo,
+                         IcKapiNo = firma.IcKapiNo,
                          KurulumDurumu = firma.KurulumDurumu,
                          MalzemeTeslimDurumu = firma.MalzemeTeslimDurumu,
                          MalzemeTeslimNo = firma.MalzemeTeslimNo,
@@ -128,7 +120,7 @@ namespace DataAccess.Concrete.EntityFramework
                          OstimGorusmeTarihi = firma.OstimGorusmeTarihi,
                          OstimNot = firma.OstimNot,
                          PaketTeslimIadeDurumuAdi = paketTeslimIadeDurumu.PaketTeslimIadeDurumuAdi,
-                         Parsel = adres.Parsel,
+                         Parsel = firma.Parsel,
                          SahaRevizeNot = firma.SahaRevizeNot,
                          SahaRevizeTarihi = firma.SahaRevizeTarihi,
                          SatisKaynagiAdi = satisKaynagi.SatisKaynagiAdi,
@@ -146,16 +138,14 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (GuvenlikProjeContext context = new GuvenlikProjeContext())
             {
-                var result = from adres in context.Adress
-                             join firma in context.Firmas
-                             on adres.Id equals firma.Id
+                var result = from firma in context.Firmas
                              where firma.FirmaAdi.Contains(firmaAdi)
                              select new FirmaSearchDTO()
                              {
                                  FirmaId=firma.Id,
                                  FirmaAdi = firma.FirmaAdi,
                                  FirmaTelefonu = firma.FirmaTelefonu,
-                                 AdresNo = adres.AdresNo
+                                 AdresNo = firma.AdresNo
                              };
                 return result.ToList();
             }

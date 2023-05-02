@@ -23,12 +23,6 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<FirmaManager>().As<IFirmaService>();
             builder.RegisterType<EfFirmaDal>().As<IFirmaDal>();
 
-            builder.RegisterType<FirmaYetkiliManager>().As<IFirmaYetkiliService>();
-            builder.RegisterType<EfFirmaYetkiliDal>().As<IFirmaYetkiliDal>();
-
-            builder.RegisterType<AdresManager>().As<IAdresService>();
-            builder.RegisterType<EfAdresDal>().As<IAdresDal>();
-
             builder.RegisterType<CaddeManager>().As<ICaddeService>();
             builder.RegisterType<EfCaddeDal>().As<ICaddeDal>();
 
