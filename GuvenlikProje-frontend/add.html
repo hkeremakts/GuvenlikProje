@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Commpatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script type="text/javascript" src="lib/bootstrap-datepicker.js"></script>
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script>
+            $(function(){
+                $('#ostimgorusmetarihi').datepicker({
+                    'format':'yyyy-mm-dd',
+                    'autoclose':true
+                })
+            });
+            $(function(){
+                $('#tepegorusmetarihi').datepicker({
+                    'format':'yyyy-mm-dd',
+                    'autoclose':true
+                })
+            });
+            $(function(){
+                $('#malzemeteslimtarihi').datepicker({
+                    'format':'yyyy-mm-dd',
+                    'autoclose':true
+                })
+            });
+            $(function(){
+                $('#montajtarihi').datepicker({
+                    'format':'yyyy-mm-dd',
+                    'autoclose':true
+                })
+            });
+            $(function(){
+                $('#saharevizetarihi').datepicker({
+                    'format':'yyyy-mm-dd',
+                    'autoclose':true
+                })
+            });
+        </script>
+        
+        <title>Add</title>
+    </head>
+    <body>
+        <br>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Firma</span>
+                            <input id="firmaadi" name="firmaadi" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Firma Telefon</span>
+                            <input id="firmatelefon" name="firmatelefon" type="text" class="form-control"/>
+                        </div>
+                    </div>    
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Yetkili</span>
+                            <input id="firmayetkiliadi" name="firmayetkiliadi" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Yetkili Telefon</span>
+                            <input id="firmayetkilitelefon" name="firmayetkilitelefon" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Adres No</span>
+                            <input id="adresno" name="adresno" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Cadde</span>
+                            <div class="input-group-text">
+                                <div class="dropdown">
+                                    <button id="caddeButton" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                      Cadde
+                                    </button>
+                                    <ul id="caddeUl" class="dropdown-menu">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Sokak</span>
+                            <div class="input-group-text">
+                                <div class="dropdown">
+                                    <button id="sokakButton" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                      Sokak
+                                    </button>
+                                    <ul id="sokakUl" class="dropdown-menu">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Dış Kapı No</span>
+                            <input id="diskapino" name="diskapino" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">İç Kapı No</span>
+                            <input id="ickapino" name="ickapino" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Ada</span>
+                            <input id="ada" name="ada" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-3">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Parsel</span>
+                            <input id="parsel" name="parsel" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Tepe Müşteri No</span>
+                            <input id="tepemusterino" name="tepemusterino" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Satış Kaynağı</span>
+                            <div class="input-group-text">
+                                <div class="dropdown">
+                                    <button id="satisKaynagiButton" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                      Satış Kaynağı
+                                    </button>
+                                    <ul id="satisKaynagiUl" class="dropdown-menu">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Satış Temsilcisi</span>
+                            <div class="input-group-text">
+                                <div class="dropdown">
+                                    <button id="satisTemsilcisiButton" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                      Satış Temsilcisi
+                                    </button>
+                                    <ul id="satisTemsilcisiUl" class="dropdown-menu">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Durum</span>
+                            <div class="input-group-text">
+                                <div class="dropdown">
+                                    <button id="durumButton" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                        Durum
+                                    </button>
+                                    <ul id="durumUl" class="dropdown-menu">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Varsa Farklı Firma</span>
+                            <div class="input-group-text">
+                                <div class="dropdown">
+                                    <button id="farkliFirmaButton" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                        Varsa Farklı Firma
+                                    </button>
+                                    <ul id="farkliFirmaUl" class="dropdown-menu">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Açıklama</span>
+                            <input id="aciklama" name="aciklama" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">C.O. Görüşme Detayı</span>
+                            <input id="cogorusmedetayi" name="cogorusmedetayi" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Ostim Görüşme Tarihi</span>
+                            <input id="ostimgorusmetarihi" name="ostimgorusmetarihi" value="0001-01-01" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Ostim Notu</span>
+                            <input id="ostimnot" name="ostimnot" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">                    
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Tepe Görüşme Tarihi</span>
+                            <input id="tepegorusmetarihi" name="tepegorusmetarihi" value="0001-01-01" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Tepe Notu</span>
+                            <input id="tepenot" name="tepenot" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Paket Teslim İade Durumu</span>
+                            <div class="input-group-text">
+                                <div class="dropdown">
+                                    <button id="paketTeslimDurumuButton" class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                        Paket Teslim İade Durumu
+                                    </button>
+                                    <ul id="paketTeslimDurumuUl" class="dropdown-menu">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Malzeme Teslim No</span>
+                            <input id="malzemeteslimno" name="malzemeteslimno" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Malzeme Teslim Durumu</span>
+                            <div class="input-group-text">
+                                <input id="malzemeteslimdurumu" name="malzemeteslimdurumu" class="form-check-input mt-0" type="checkbox" value="" >
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Malzeme Teslim Tarihi</span>
+                            <input id="malzemeteslimtarihi" name="malzemeteslimtarihi" value="0001-01-01" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Kurulum Durumu</span>
+                            <div class="input-group-text">
+                                <input id="kurulumdurumu" name="kurulumdurumu" class="form-check-input mt-0" type="checkbox" value="" >
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Montaj Tarihi</span>
+                            <input id="montajtarihi" name="montajtarihi" value="0001-01-01" type="text" class="form-control"/>
+                        </div>
+                    </div>
+        
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Saha Revize Tarihi</span>
+                            <input id="saharevizetarihi" name="saharevizetarihi" value="0001-01-01" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>    
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Saha Revize Notu</span>
+                            <input id="saharevizenot" name="saharevizenot" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Firmanın Alarm İstemediğine Dair Yazı</span>
+                            <input id="firmaninalarmistemediginedairyazi" name="firmaninalarmistemediginedairyazi" type="text" class="form-control"/>
+                        </div>
+                    </div>
+                </div>         
+            </form>
+        </div>
+        <br>
+        <button class="btn btn-danger" id="addButton">Ekle</button>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
+    </body>
+    <script src="addscript.js">    
+    </script>
+</html>
