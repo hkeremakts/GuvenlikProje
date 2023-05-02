@@ -42,10 +42,10 @@ namespace Entities.Concrete
         public string? FirmaninAlarmIstemedigineDairYazi { get; set; }
         [Column(TypeName = "DateTime2")]
         public DateTime? TepeGorusmeTarihi { get; set; }
-        public string TepeNot { get; set; }
+        public string? TepeNot { get; set; }
         public int PaketTeslimIadeDurumuId { get; set; }
         public PaketTeslimIadeDurumu? PaketTeslimIadeDurumu { get; set; }
-        public string MalzemeTeslimNo { get; set; }
+        public string? MalzemeTeslimNo { get; set; }
         public bool MalzemeTeslimDurumu { get; set; }
         [Column(TypeName = "DateTime2")]
         public DateTime? MalzemeTeslimTarihi { get; set; }

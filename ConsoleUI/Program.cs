@@ -36,7 +36,7 @@ internal class Program
                     dal
             });
             var managerAdd = managerType.GetMethod("Add");
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 50; i++)
             {
                 foreach (var property in properties)
                 {
@@ -44,7 +44,7 @@ internal class Program
                     {
                         if (property.Name != "Id")
                         {
-                            property.SetValue(obj, rnd.Next(1, 15));
+                            property.SetValue(obj, rnd.Next(1, 50));
                         }
                     }
                     else
